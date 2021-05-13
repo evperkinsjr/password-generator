@@ -26,9 +26,14 @@ var specialChar = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", "
 // user is prompted to choose a password length 8-128 characters (type in a number)
 var pwLength = Number(window.prompt("Type a number between 8 and 128, please.", ""));
 
-// validate prompt
+if (pwLength >= 8 && pwLength <= 128) {
+    alert("Your password will be " + pwLength + " characters long.");
+} else {
+    alert("Please type a number between 8 and 128.");
+}
 
 // alert user that next 4 prompts ask for character types and they should choose at least one
+var nextPrompt = confirm("Ready to choose character types?");
 
 // user is prompted for lowercase characters
 
