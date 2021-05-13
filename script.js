@@ -33,21 +33,25 @@ if (pwLength >= 8 && pwLength <= 128) {
 }
 
 // alert user that next 4 prompts ask for character types and they should choose at least one
-var nextPrompt = confirm("Ready to choose character types?");
+var nextPrompt = confirm("Next, choose at least one of four character types: lowercase letters, uppcase letters, numbers, and special characters.");
 
 // user is prompted for lowercase characters
+var lowerChoice = confirm("Lowercase letters?");
 
 // validate prompt
 
 // user is prompted for uppercase characters
+var upperChoice = confirm("Uppercase letters?");
 
 // validate prompt
 
 // user is prompted for numerical characters
+var numericalChoice = confirm("Numbers?");
 
 // validate prompt
 
 // user is prompted for special characters
+var specialChoice = confirm("Special characters?");
 
 // validate prompt
 
