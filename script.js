@@ -38,12 +38,28 @@ while (pwLength < 8 || pwLength > 128 || !pwLength || pwLength === NaN) {
     }
 }
 
-// user is prompted for character types
+// prompts user for character types
 var lowerChoice = confirm("Do you want lowercase letters?");
 var upperChoice = confirm("Do you want uppercase letters?");
 var numericalChoice = confirm("Do you want numbers?");
 var specialChoice = confirm("Do you want special characters?");
 
+// checks if character types were selected; if so, they're added to the password array.
+if (lowerChoice) {
+    characterArray.push(lowerCaseChar);
+}
+
+if (upperChoice) {
+    characterArray.push(upperCaseChar);
+}
+
+if (numericalChoice) {
+    characterArray.push(numericalChar);
+}
+
+if (specialChoice) {
+    characterArray.push(specialChar);
+}
 
 // check if at least one character type is selected
 // if not, alert user that at least one character type must be selected then rerun character prompts AND repeat check
