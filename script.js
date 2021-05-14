@@ -21,6 +21,8 @@ var upperCaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 var numericalChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var specialChar = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
+
+var characterArray = [];
 // user clicks button to generate password
 
 // user is prompted to choose a password length 8-128 characters (type in a number)
