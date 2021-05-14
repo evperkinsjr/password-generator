@@ -28,8 +28,6 @@ var characterArray = [];
 // user is prompted to choose a password length 8-128 characters (type in a number)
 var pwLength = Number(window.prompt("Type a number between 8 and 128, please.", ""));
 
-
-
 while (pwLength < 8 || pwLength > 128 || !pwLength || pwLength === NaN) {
     alert("Please type a number between 8 and 128.");
     Number(window.prompt("Type a number between 8 and 128, please.", ""));
@@ -44,7 +42,16 @@ var upperChoice = confirm("Do you want uppercase letters?");
 var numericalChoice = confirm("Do you want numbers?");
 var specialChoice = confirm("Do you want special characters?");
 
-// checks if character types were selected; if so, they're added to the password array.
+// checks if at least one character type was selected
+while (!lowerChoice && !upperChoice && !numericalChoice && !specialChoice) {
+    alert("Please choose at least one character type");
+    lowerChoice = confirm("Do you want lowercase letters?");
+    upperChoice = confirm("Do you want uppercase letters?");
+    numericalChoice = confirm("Do you want numbers?");
+    specialChoice = confirm("Do you want special characters?");
+}
+
+// if character types were selected, they're added to the password array.
 if (lowerChoice) {
     characterArray.push(lowerCaseChar);
 }
