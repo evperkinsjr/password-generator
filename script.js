@@ -26,34 +26,22 @@ var specialChar = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", "
 // user is prompted to choose a password length 8-128 characters (type in a number)
 var pwLength = Number(window.prompt("Type a number between 8 and 128, please.", ""));
 
-if (pwLength >= 8 && pwLength <= 128) {
-    alert("Your password will be " + pwLength + " characters long.");
-} else {
+
+
+while (pwLength < 8 || pwLength > 128 || !pwLength || pwLength === NaN) {
     alert("Please type a number between 8 and 128.");
+    Number(window.prompt("Type a number between 8 and 128, please.", ""));
+    if (pwLength >= 8 && pwLength <= 128) {
+        break;
+    }
 }
 
-// alert user that next 4 prompts ask for character types and they should choose at least one
-var nextPrompt = confirm("Next, choose at least one of four character types: lowercase letters, uppcase letters, numbers, and special characters.");
+// user is prompted for character types
+var lowerChoice = confirm("Do you want lowercase letters?");
+var upperChoice = confirm("Do you want uppercase letters?");
+var numericalChoice = confirm("Do you want numbers?");
+var specialChoice = confirm("Do you want special characters?");
 
-// user is prompted for lowercase characters
-var lowerChoice = confirm("Lowercase letters?");
-
-// validate prompt
-
-// user is prompted for uppercase characters
-var upperChoice = confirm("Uppercase letters?");
-
-// validate prompt
-
-// user is prompted for numerical characters
-var numericalChoice = confirm("Numbers?");
-
-// validate prompt
-
-// user is prompted for special characters
-var specialChoice = confirm("Special characters?");
-
-// validate prompt
 
 // check if at least one character type is selected
 // if not, alert user that at least one character type must be selected then rerun character prompts AND repeat check
