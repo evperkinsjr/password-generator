@@ -24,49 +24,51 @@ var specialChar = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", "
 
 var characterArray = [];
 // user clicks button to generate password
+function generatePassword() {
+    // user is prompted to choose a password length 8-128 characters (type in a number)
+    var pwLength = Number(window.prompt("Type a number between 8 and 128, please.", ""));
 
-// user is prompted to choose a password length 8-128 characters (type in a number)
-var pwLength = Number(window.prompt("Type a number between 8 and 128, please.", ""));
+    while (pwLength < 8 || pwLength > 128 || !pwLength || pwLength === NaN) {
+        alert("Please type a number between 8 and 128.");
+        Number(window.prompt("Type a number between 8 and 128, please.", ""));
+        if (pwLength >= 8 && pwLength <= 128) {
+            break;
+        }
+    }
 
-while (pwLength < 8 || pwLength > 128 || !pwLength || pwLength === NaN) {
-    alert("Please type a number between 8 and 128.");
-    Number(window.prompt("Type a number between 8 and 128, please.", ""));
-    if (pwLength >= 8 && pwLength <= 128) {
-        break;
+    // prompts user for character types
+    var lowerChoice = confirm("Do you want lowercase letters?");
+    var upperChoice = confirm("Do you want uppercase letters?");
+    var numericalChoice = confirm("Do you want numbers?");
+    var specialChoice = confirm("Do you want special characters?");
+
+    // checks if at least one character type was selected
+    while (!lowerChoice && !upperChoice && !numericalChoice && !specialChoice) {
+        alert("Please choose at least one character type");
+        lowerChoice = confirm("Do you want lowercase letters?");
+        upperChoice = confirm("Do you want uppercase letters?");
+        numericalChoice = confirm("Do you want numbers?");
+        specialChoice = confirm("Do you want special characters?");
+    }
+
+    // if character types were selected, they're added to the password array.
+    if (lowerChoice) {
+        characterArray.push(lowerCaseChar);
+    }
+
+    if (upperChoice) {
+        characterArray.push(upperCaseChar);
+    }
+
+    if (numericalChoice) {
+        characterArray.push(numericalChar);
+    }
+
+    if (specialChoice) {
+        characterArray.push(specialChar);
     }
 }
 
-// prompts user for character types
-var lowerChoice = confirm("Do you want lowercase letters?");
-var upperChoice = confirm("Do you want uppercase letters?");
-var numericalChoice = confirm("Do you want numbers?");
-var specialChoice = confirm("Do you want special characters?");
-
-// checks if at least one character type was selected
-while (!lowerChoice && !upperChoice && !numericalChoice && !specialChoice) {
-    alert("Please choose at least one character type");
-    lowerChoice = confirm("Do you want lowercase letters?");
-    upperChoice = confirm("Do you want uppercase letters?");
-    numericalChoice = confirm("Do you want numbers?");
-    specialChoice = confirm("Do you want special characters?");
-}
-
-// if character types were selected, they're added to the password array.
-if (lowerChoice) {
-    characterArray.push(lowerCaseChar);
-}
-
-if (upperChoice) {
-    characterArray.push(upperCaseChar);
-}
-
-if (numericalChoice) {
-    characterArray.push(numericalChar);
-}
-
-if (specialChoice) {
-    characterArray.push(specialChar);
-}
 
 // check if at least one character type is selected
 // if not, alert user that at least one character type must be selected then rerun character prompts AND repeat check
