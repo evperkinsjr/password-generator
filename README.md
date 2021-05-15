@@ -11,12 +11,10 @@ This application randomly generates a password based on user inputs. I accomplis
 6. Passing the newly created password into the text area of the HTML for the user to see.
 7. Making the sure the application mobile-responsive.
 
-Link to live webpage: [Password Generator](#)
+Link to live webpage: [Password Generator](https://evperkinsjr.github.io/password-generator/)
 
 ## Screenshot
 ![Password Generator Screenshot](password-generator-screenshot.png)
-
-> **Note**: The Horiseon Code Refactor project link is live. The other projects are placeholders, so the links don't work.
 
 ## Technologies Used
 
