@@ -19,7 +19,7 @@ function generate() {
 			alert("Your password will be " + pwLength + " characters long.");
 		} else {
         alert("Please type a number between 8 and 128.");
-        prompt("Type a number between 8 and 128, please.");
+        pwLength = prompt("Type a number between 8 and 128, please.");
     }
 
 	// Character type prompts
