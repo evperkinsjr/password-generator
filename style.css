@@ -1,9 +1,11 @@
+/* Universal Reset */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* Body Styling */
 html,
 body,
 .wrapper {
@@ -30,6 +32,7 @@ header {
     color: hsl(0, 0%, 100%);
 }
 
+/* Generate Password Card */
 .card {
     background-color: hsl(0, 0%, 100%);
     border-radius: 5px;
@@ -48,6 +51,13 @@ header {
     width: 100%;
     background: #e7e9eb;
     height: 2px;
+}
+
+.card-steps {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .card-body {
@@ -118,11 +128,16 @@ button[disabled] {
     overflow: hidden;
 }
 
+/* Media Queries */
 @media (max-width: 690px) {
     .btn {
         font-size: 1rem;
         margin: 16px 0px 0px 0px;
         padding: 10px 15px;
+    }
+
+    .card-steps {
+        font-size: 0.9rem;
     }
 
     #password {
@@ -131,7 +146,7 @@ button[disabled] {
 }
 
 @media (max-width: 500px) {
-    .btn {
+    .btn, .card-steps {
         font-size: 0.8rem;
     }
 }
