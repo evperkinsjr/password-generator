@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 var lowerChar = "abcdefghijklmnopqrstuvwxyz";
 var upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numericalChar = "0123456789";
-var specialChar = "!@#$%^&?_-+=";
+var specialChar = "!@#$%^&?_-+=.,~";
 var selectedCharacters = "";
 
 // user clicks "Generate" button
