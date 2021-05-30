@@ -14,7 +14,7 @@ This application randomly generates a password based on user inputs. I accomplis
 Link to live webpage: [Password Generator](https://evperkinsjr.github.io/password-generator/)
 
 ## Screenshot
-![Password Generator Screenshot](password-generator-screenshot.png)
+![Password Generator Screenshot](./assets/images/password-generator-screenshot.png)
 
 ## Technologies Used
 
