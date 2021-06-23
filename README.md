@@ -16,7 +16,7 @@ Link to live webpage: [Password Generator](https://evperkinsjr.github.io/passwor
 <p>&nbsp</p>
 
 ## Mock-up
-![Password Generator Screenshot](./assets/images/password-generator-mockup.gif)
+![Password Generator Mock-up](./assets/images/password-generator-mockup.gif)
 
 <p>&nbsp</p>
 
