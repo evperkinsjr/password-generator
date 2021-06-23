@@ -13,11 +13,25 @@ This application randomly generates a password based on user inputs. I accomplis
 
 Link to live webpage: [Password Generator](https://evperkinsjr.github.io/password-generator/)
 
+<p>&nbsp</p>
+
 ## Screenshot
 ![Password Generator Screenshot](./assets/images/password-generator-screenshot.png)
+
+<p>&nbsp</p>
 
 ## Technologies Used
 
 - HTML
 - CSS
 - Javascript
+
+<p>&nbsp</p>
+
+## Contact Information
+<enrico.perkins@gmail.com>
+
+<p>&nbsp</p>
+
+## License
+This project is licensed under the terms of the MIT license.
